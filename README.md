@@ -8,15 +8,27 @@ Polycystic Ovary Syndrome (PCOS) affects approximately 1 in 5 women globally, wi
 
 ## Results
 
+### Single Train-Test Split (80/20)
+
 | Model | Accuracy | Precision | Recall | F1 | AUC-ROC |
 |---|---|---|---|---|---|
 | Logistic Regression | 86.24% | 74.42% | 88.89% | 81.01% | 0.9239 |
 | Random Forest | 88.99% | 83.33% | 83.33% | 83.33% | 0.9279 |
-| **Gradient Boosting** | **88.99%** | **83.33%** | **83.33%** | **83.33%** | **0.9486** |
+| Gradient Boosting | 88.99% | 83.33% | 83.33% | 83.33% | 0.9486 |
 | SVM | 85.32% | 77.78% | 77.78% | 77.78% | 0.9359 |
 | PCOSNet (Deep Learning) | 86.24% | 81.82% | 75.00% | 78.26% | 0.8893 |
+| **Tuned Random Forest** | **96.33%** | **94.44%** | **94.44%** | **94.44%** | **0.9951** |
 
-**Best model: Gradient Boosting — AUC-ROC 0.9486**
+### 5-Fold Stratified Cross-Validation
+
+| Model | Accuracy | F1 | AUC-ROC |
+|---|---|---|---|
+| Logistic Regression | 0.8650 ± 0.0326 | 0.8069 ± 0.0429 | 0.9333 ± 0.0083 |
+| Random Forest | 0.8836 ± 0.0312 | 0.8233 ± 0.0447 | 0.9497 ± 0.0104 |
+| Gradient Boosting | 0.8798 ± 0.0275 | 0.8205 ± 0.0379 | 0.9434 ± 0.0132 |
+| SVM | 0.8502 ± 0.0421 | 0.7728 ± 0.0625 | 0.9289 ± 0.0124 |
+
+**Best model: Tuned Random Forest — 96.33% accuracy, AUC-ROC 0.9951**
 
 ## Dataset
 
