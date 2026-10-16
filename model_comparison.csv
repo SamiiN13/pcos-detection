@@ -1,0 +1,6 @@
+,Accuracy,Precision,Recall,F1,AUC-ROC
+Logistic Regression,0.8624,0.7442,0.8889,0.8101,0.9239
+Random Forest,0.8899,0.8333,0.8333,0.8333,0.9279
+Gradient Boosting,0.8899,0.8333,0.8333,0.8333,0.9486
+SVM,0.8532,0.7778,0.7778,0.7778,0.9359
+PCOSNet (Deep Learning),0.8624,0.8182,0.75,0.7826,0.8893
